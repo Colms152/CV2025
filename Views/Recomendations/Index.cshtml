@@ -1,0 +1,50 @@
+﻿@{
+    ViewData["Title"] = "Recommendations";
+    List<Recommendation> recommendations = ViewBag.recommendations;
+}
+
+
+
+<!-- ======= Testimonials Section ======= -->
+<section id="testimonials" class="testimonials">
+    <div class="container">
+
+        <div class="owl-carousel testimonials-carousel">          
+           
+
+            @foreach (Recommendation rec in recommendations)
+            {
+                
+            <div class="testimonial-item">
+            <img src="~/assets/img/testimonials/1.jpg" class="testimonial-img" alt="">
+            <h3>@rec.Author</h3>
+            <h4>@rec.Email</h4>
+            <p>
+                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                @rec.Text
+                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+        </div>
+            }
+
+
+        </div>
+
+    </div>
+</section><!-- End Testimonials Section -->
+
+<section id="portfolio-details">
+    <div class="container">
+        <div class="portfolio-description">
+
+            @foreach (Recommendation rec in recommendations)
+            {
+                <h3>@rec.Author said:</h3>
+                <p1>"@rec.Text"</p1>
+            }
+
+        </div>
+</div>
+
+
+</section>

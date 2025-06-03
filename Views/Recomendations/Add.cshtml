@@ -1,0 +1,55 @@
+﻿@model Recommendation
+@{
+    ViewData["Title"] = "Add Review";
+}
+
+<!-- ======= Contact Me Section ======= -->
+<section id="contact" class="contact">
+    <div class="container">
+
+        <div class="section-title">
+            <span>Leave a Review</span>
+            <h2>Leave a Review</h2>
+            <p>Please leave a review below.</p>
+        </div>
+
+        <div class="row">
+            <form method="post" asp-controller="Recomendations" asp-action="Add">
+                <div class="form-row">
+                    @Html.ValidationSummary()
+                </div>
+                <div class="form-row">
+                    <div class="col-md-6 form-group">
+                        <input asp-for="Author" class="form-control" name="Author" id="Author" placeholder="Your Name" />
+                        <span asp-validation-for="Author"></span>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input asp-for="Email" name="email" class="form-control" id="email" placeholder="Your Email" />
+                        <span asp-validation-for="Email"></span>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input asp-for="Age" name="Age" class="form-control" id="Age" placeholder="Your Age" />
+                        <span asp-validation-for="Age"></span>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <input asp-for="Id" name="Id" class="form-control" id="Id" placeholder="Create a Custom Id" />
+                        <span asp-validation-for="Id"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input asp-for="Text" class = "form-control", placeholder = "Leave your review here"/>
+                    <span asp-validation-for="Email"></span>
+                </div>
+               
+                <div class="text-center"><button type="submit">Submit Review</button></div>
+    
+            </form>
+        </div>
+
+          
+
+
+
+
+        </div>
+</section><!-- End Contact Me Section -->
