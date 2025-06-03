@@ -1,0 +1,7 @@
+version: '3.5'
+services:
+  dotnetwebapp:
+    
+    build: ./
+    ports:
+    - "80:80"  
